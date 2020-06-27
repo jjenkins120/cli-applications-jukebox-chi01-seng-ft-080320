@@ -37,7 +37,8 @@ end
 
 def list(songs)
   songs.each_with_index do |object, index|
-  
+  index_plus_one = index + 1
+  puts "#{index_plus_one}. #{object}"
 end 
 
 def play 
