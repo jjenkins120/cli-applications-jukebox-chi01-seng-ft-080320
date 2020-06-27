@@ -36,7 +36,8 @@ def help
 end
 
 def list(songs)
-  puts songs.each_with_index + 1
+  songs.each_with_index do |object, index|
+  
 end 
 
 def play 
