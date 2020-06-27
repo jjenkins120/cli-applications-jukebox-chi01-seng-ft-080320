@@ -9,4 +9,3 @@ user_name = gets.strip
 
 puts say_hello(user_name)
 
-binding.pry
