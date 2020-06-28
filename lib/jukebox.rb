@@ -41,6 +41,7 @@ def list(songs)
   end
 end 
 #need to revisit this method so that song name and index number work
+=begin
 def play(songs)
   puts "Please enter a song name or number:"
   chosen_song = gets.downcase.strip
@@ -54,6 +55,23 @@ def play(songs)
     end
   end
 end
+=end
+
+def play(songs)
+  puts "Please enter a song name or number:"
+  user_response = gets.downcase.chomp 
+  
+  if (1..9).to_a.include?(user_response.to_i)
+    puts "Playing #{songs[user_response.to_i - 1]}"
+    elsif songs.include?(user_response)
+    puts "Playing #{user_response}"
+  else 
+    puts "Invalid input, please try again"
+  end 
+end 
+
+
+
 
 def exit_jukebox
   puts "Goodbye"
