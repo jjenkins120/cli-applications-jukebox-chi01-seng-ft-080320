@@ -40,11 +40,35 @@ def list(songs)
   index_plus_one = index + 1
   puts "#{index_plus_one}. #{object}"
 end 
-
-def play 
+#need to revisit this method so that song name and index number work
+def play(songs)
+  puts "Please enter a song name or number:"
+  chosen_song = gets.strip
+  songs.each do |object|
+    if chosen_song == object
+      puts "Playing #{object}."
+    elsif
+    else
+      puts "Invalid input, please try again"
+      play(songs)
+    end  
 end
+
 def exit_jukebox
+  puts "Goodbye"
 end 
-def run 
+
+def run
+  puts "Please enter a command:"
+  chosen_command = gets.strip.to_s
+  if chosen_command == "help"
+    help
+  elsif chosen_command == "play"
+    play
+  elsif chosen_command == "help"
+    help
+  elsif chosen_command == "exit"
+    exit_jukebox
+  end
 end 
 
