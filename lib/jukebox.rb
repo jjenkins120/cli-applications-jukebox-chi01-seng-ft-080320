@@ -63,10 +63,13 @@ def run
   chosen_command = gets.strip.to_s
   if chosen_command == "help"
     help
+    run
   elsif chosen_command == "play"
     play
+    run
   elsif chosen_command == "help"
     help
+    run
   elsif chosen_command == "exit"
     exit_jukebox
   end
