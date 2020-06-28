@@ -48,7 +48,7 @@ def play(songs)
   songs.each do |object|
     if chosen_song == object
       puts "Playing #{object}."
-    elsif
+    #elsif
     else
       puts "Invalid input, please try again"
       play(songs)
