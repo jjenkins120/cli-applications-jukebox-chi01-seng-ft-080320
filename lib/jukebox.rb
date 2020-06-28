@@ -43,7 +43,7 @@ end
 #need to revisit this method so that song name and index number work
 def play(songs)
   puts "Please enter a song name or number:"
-  chosen_song = gets.strip
+  chosen_song = gets.downcase.strip
   songs.each do |object|
     if chosen_song == object
       puts "Playing #{object}."
