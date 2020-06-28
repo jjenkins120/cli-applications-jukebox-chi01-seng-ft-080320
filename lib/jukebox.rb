@@ -60,6 +60,7 @@ def exit_jukebox
   puts "Goodbye"
 end 
 
+#also needs work
 def run
   puts "Please enter a command:"
   chosen_command = gets.strip.to_s
