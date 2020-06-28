@@ -59,7 +59,7 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  user_response = gets.downcase.chomp 
+  user_response = gets.downcase.chomp.to_s 
   
   if (1..9).to_a.include?(user_response.to_i)
     puts "Playing #{songs[user_response.to_i - 1]}"
@@ -80,7 +80,7 @@ end
 #also needs work
 def run
   puts "Please enter a command:"
-  chosen_command = gets.strip.to_s
+  chosen_command = gets.downcase.strip.to_s
   if chosen_command == "help"
     help
   elsif chosen_command == "play"
