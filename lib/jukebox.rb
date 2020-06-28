@@ -37,8 +37,7 @@ end
 
 def list(songs)
   songs.each_with_index do |object, index|
-  index_plus_one = index + 1
-  puts "#{index_plus_one}. #{object}"
+  puts "#{index+1}. #{object}"
   end
 end 
 #need to revisit this method so that song name and index number work
