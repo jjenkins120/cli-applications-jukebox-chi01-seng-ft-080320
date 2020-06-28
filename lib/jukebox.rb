@@ -39,6 +39,7 @@ def list(songs)
   songs.each_with_index do |object, index|
   index_plus_one = index + 1
   puts "#{index_plus_one}. #{object}"
+  end
 end 
 #need to revisit this method so that song name and index number work
 def play(songs)
@@ -51,7 +52,8 @@ def play(songs)
     else
       puts "Invalid input, please try again"
       play(songs)
-    end  
+    end
+  end
 end
 
 def exit_jukebox
