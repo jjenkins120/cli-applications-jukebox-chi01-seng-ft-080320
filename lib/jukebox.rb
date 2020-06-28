@@ -46,7 +46,7 @@ def play(songs)
   user_response = gets.downcase.chomp
   if (1..9).to_a.include?(user_response.to_i)
     puts "Playing #{songs[user_response.to_i - 1]}"
-  #elsif user_response == 
+  elsif user_response == 
    # puts ""
   else 
     puts "Invalid input, please try again"
