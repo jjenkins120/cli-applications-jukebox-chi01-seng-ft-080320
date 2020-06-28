@@ -44,21 +44,14 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   user_response = gets.downcase.chomp
-  songs.each_with_index do |object, index|
-    if user_response.to_i == (index+1)
-      puts "Playing #{object}"
-    elsif user_response.to_s == object
-      puts "Playing #{object}"
-  #if (1..9).to_a.include?(user_response.to_i)
-    #puts "Playing #{songs[user_response.to_i - 1]}"
-  #elsif user_response == song.each
-    #puts ""
-    else 
-      puts "Invalid input, please try again"
-    end 
-  end
+  if (1..9).to_a.include?(user_response.to_i)
+    puts "Playing #{songs[user_response.to_i - 1]}"
+  elsif user_response == 
+    puts ""
+  else 
+    puts "Invalid input, please try again"
+  end 
 end 
-
 
 def exit_jukebox
   puts "Goodbye"
