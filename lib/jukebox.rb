@@ -40,31 +40,15 @@ def list(songs)
   puts "#{index+1}. #{object}"
   end
 end 
-#need to revisit this method so that song name and index number work
-=begin
-def play(songs)
-  puts "Please enter a song name or number:"
-  chosen_song = gets.downcase.strip
-  songs.each do |object|
-    if chosen_song == object
-      puts "Playing #{object}."
-    #elsif
-    else
-      puts "Invalid input, please try again"
-      play(songs)
-    end
-  end
-end
-=end
 
 def play(songs)
   puts "Please enter a song name or number:"
   user_response = gets.downcase.chomp
-  
   if (1..9).to_a.include?(user_response.to_i)
     puts "Playing #{songs[user_response.to_i - 1]}"
-    elsif songs.include?(user_response)
-    puts "Playing #{user_response}"
+  #elsif songs.include?(user_response)
+   # puts "Playing #{user_response}"
+  #elsif 
   else 
     puts "Invalid input, please try again"
   end 
@@ -73,24 +57,6 @@ end
 def exit_jukebox
   puts "Goodbye"
 end 
-
-#also needs work
-=begin
-def run
-  puts "Please enter a command:"
-  chosen_command = gets.downcase.strip.to_s
-  if chosen_command == "help"
-    help
-  elsif chosen_command == "play"
-    play
-  elsif chosen_command == "help"
-    help
-  elsif chosen_command == "exit"
-    exit_jukebox
-    break
-  end
-end 
-=end
 
 def run(songs)
   #help
