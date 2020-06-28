@@ -59,7 +59,7 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  user_response = gets.downcase.chomp.to_s 
+  user_response = gets.downcase.chomp
   
   if (1..9).to_a.include?(user_response.to_i)
     puts "Playing #{songs[user_response.to_i - 1]}"
@@ -78,6 +78,7 @@ def exit_jukebox
 end 
 
 #also needs work
+=begin
 def run
   puts "Please enter a command:"
   chosen_command = gets.downcase.strip.to_s
@@ -92,4 +93,4 @@ def run
     break
   end
 end 
-
+=end
