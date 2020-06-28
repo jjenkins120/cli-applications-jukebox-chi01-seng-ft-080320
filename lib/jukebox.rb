@@ -40,7 +40,7 @@ def list(songs)
   puts "#{index+1}. #{object}"
   end
 end 
-=begin
+
 def play(songs)
   puts "Please enter a song name or number:"
   user_response = gets.downcase.chomp
@@ -52,18 +52,6 @@ def play(songs)
     puts "Invalid input, please try again"
   end 
 end 
-=end
-def play(songs)
-  puts "Please enter a song name or number:"
-  input = gets.chomp()
-  if (1..9).to_a.index(input.to_i) != nil
-    puts "Playing #{my_songs[input.to_i - 1]}"
-  elsif my_songs.index(input) != nil
-    puts "Playing #{input}"
-  else
-    puts "Invalid input, please try again"
-  end
-end
 
 
 def exit_jukebox
